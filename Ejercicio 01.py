@@ -13,35 +13,21 @@
 # Cuántas unidades de jabones hay en total.
 
 # Hacemos 
-tipo_producto = ''
-precio = 0
-cantidad = 0
-marca = ''
-fabricante = ''
-
-marca_barbijo_caro = ''
-cantidad_barbijo_caro = ''
-fabricante_barbijo_caro = ''
-precio_barbijo_caro = ''
-
-item_mas_unidades = ''
-fabricante_mas_unidades = ''
-
+precio_barbijo_caro = 0
+item_mas_unidades = 0
 cantidad_jabones = 0
 
-for iteracion in range (5):
+for iteracion in range (2):
 
     tipo_producto = input("Ingrese tipo de producto (jabon, barbijo o alcohol): ")
     while tipo_producto != 'barbijo' and tipo_producto!= 'jabon' and tipo_producto != 'alcohol':
         tipo_producto = input("Ingrese tipo de producto (jabon, barbijo o alcohol): ")
 
-    precio = int(input("Ingrese el precio: $"))
-    
     while (True):
-
+        precio = int(input("Ingrese el precio entre $100 y $300: $"))
         if precio > 99 and precio < 301:
             break
-    #Version do-while UTN
+        
     while (True):
         cantidad = int(input("Ingrese cantidad: "))
         if cantidad > 0 and cantidad < 1000:
@@ -56,7 +42,6 @@ for iteracion in range (5):
 # Cuántas unidades de jabones hay en total.
 
     if tipo_producto == 'barbijo':
-        # Es mas caro que el anterior
         if precio > precio_barbijo_caro:
             precio_barbijo_caro = precio
             cantidad_barbijo_caro =  cantidad
@@ -68,13 +53,13 @@ for iteracion in range (5):
 
 
     if cantidad > item_mas_unidades:
-            item_mas_unidades = cantidad
-            fabricante_mas_unidades = fabricante
+        item_mas_unidades = cantidad
+        fabricante_mas_unidades = fabricante
 
 
-print("Babrijo mas caro hay: ", cantidad_barbijo_caro, " y lo fabrica: ", fabricante_barbijo_caro)
-print("El item con mas unidades lo fabrica: ", fabricante_mas_unidades)
-print("Jabones hay: ", cantidad_jabones)
+print("Del barbijo mas caro hay: ", cantidad_barbijo_caro, " y lo fabrica: ", fabricante_barbijo_caro)
+print("El producto con mas unidades lo fabrica: ", fabricante_mas_unidades)
+print("Hay : ", cantidad_jabones, "jabones.")
 print("Fin del programa")
 
 
