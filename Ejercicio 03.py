@@ -1,4 +1,5 @@
 #Ejercicio Integrador 03
+#Denise Du Bois
 
 #La división de alimentos de industrias Wayne está trabajando en
 #un pequeño software para cargar datos de heroínas y héroes,
